@@ -45,8 +45,12 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(original){
+    let dupe =[...originalFlavors];
+    
+
+    return dupe;
+
 }    
 
 
@@ -64,8 +68,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(originalFlavors){
+   if (originalFlavors.length === 31)
+    return true;
+
+    else () {
+        return false;
+    }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,8 +90,10 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
+function addFlavor(originalFlavors,newFlavor){
+   addition = prompt("Please give me a new flavor!")
+   newFlavor = originalFlavors.unshift(addition);
+   return newFlavor;
 }
 
 
@@ -97,8 +108,9 @@ Use the removeLastFlavor function below to do the following:
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+function removeLastFlavor(originalFlavors){
+   adjusted = originalFlavors.pop();
+   return adjusted;
 }
 
 
@@ -114,8 +126,9 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(userInput){
+    userInput = int(prompt("Between 1 and 31, pick a number and get a flavor!"));
+    return originalFlavors[userInput]''
 }
 
 
@@ -134,8 +147,9 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(user, originalFlavors){
+    userInput = prompt("What flavor are you looking for?");
+    return array_search(originalFlavors);
 }
 
 
@@ -160,9 +174,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(originalFlavors,newstring){
+    var newArray =[];
+    for (let i=0;i< originalFlavors.length; i++){
+        if (originalFlavors[i].includes(newstring)) {
+            newArray.push(originalFlavors[i])
+        }
+    }
+    return newArray;
 }
+console.log(filterByWord(originalFlavors, 'Chocolate'))
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
